@@ -1,6 +1,7 @@
 const pushBtn = document.querySelector('#push');
 const newTaskInput = document.querySelector('#newtask input');
 const tasks = document.querySelector('#tasks');
+const edit = document.querySelector('#edit');
 
 
 function addNewTask()
@@ -15,23 +16,33 @@ function addNewTask()
 
         // const taskName = document.createElement('input');
         // taskName.type = 'text';
+        // taskName.classList.add('readonly');
         // taskName.value = newTaskInput.value;
 
         const taskName = document.createElement('p');
         taskName.innerHTML = newTaskInput.value;
         task.appendChild(taskName);
 
-        const edit = document.createElement('i');
-        edit.classList.add('fa-solid');
-        edit.classList.add('fa-pen-to-square');
-        task.appendChild(edit);
-        // taskName.addEventListener("click", editTask);
+        const editLogo = document.createElement('i');
+        editLogo.classList.add('fa-solid');
+        editLogo.classList.add('fa-pen-to-square');
+        task.appendChild(editLogo);
 
 
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        task.appendChild(checkbox); 
-        checkbox.addEventListener("click", removeTask);
+        editLogo.addEventListener("click", editTask);
+
+        // const editable = document.createElement('input');
+        // task.replaceChild(taskName, editable);
+    
+
+        const deleteTask = document.createElement('i');
+        deleteTask.classList.add('fa-solid');
+        deleteTask.classList.add('fa-trash');
+        task.appendChild(deleteTask);
+        // const checkbox = document.createElement('input');
+        // checkbox.type = 'checkbox';
+        // task.appendChild(checkbox); 
+        deleteTask.addEventListener("click", removeTask);
     }
 }
 
@@ -43,9 +54,10 @@ function removeTask()
 
 function editTask()
 {
-
+    edit.style.display = 'block';
+    edit.input.value = this.taskName.value;
 }
 
 
 
-push.addEventListener("click", addNewTask);
+pushBtn.addEventListener("click", addNewTask);

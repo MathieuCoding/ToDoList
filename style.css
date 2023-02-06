@@ -63,12 +63,13 @@ body{
     background-color: #ffffff;
     padding: 30px 20px;
     margin-top: 10px;
+   
 }
 
 .task{
     border-radius: 5px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     border: 1px solid #939697;
     cursor: pointer;
     background-color: #c5e6c5;
@@ -76,8 +77,16 @@ body{
     margin-bottom: 8px;
     padding: 5px 10px;
     display: flex;
+    
+    display: grid;
+    grid-template-columns: 10fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    /* grid-column-gap: 0px;
+    grid-row-gap: 0px; */
+    padding-left: 20px;
+   
 }
-.task span{
+.task input{
     font-family: 'Montserrat',sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -92,3 +101,8 @@ body{
     width: 40px;
     border-radius: 5px;
 }
+ 
+#edit{
+    margin-top: 20px;
+    display: none;
+} 
