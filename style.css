@@ -90,6 +90,8 @@ body{
     font-family: 'Montserrat',sans-serif;
     font-size: 15px;
     font-weight: 400;
+    background: none;
+    border: none;
 }
 .task button{
     background-color: #4c9a2a;
@@ -101,8 +103,3 @@ body{
     width: 40px;
     border-radius: 5px;
 }
- 
-#edit{
-    margin-top: 20px;
-    display: none;
-} 
