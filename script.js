@@ -23,8 +23,7 @@ window.addEventListener('load', () => {
             newTaskInput.value = "";
 
             const editLogo = document.createElement('i');
-            editLogo.classList.add('fa-solid');
-            editLogo.classList.add('fa-pen-to-square');
+            editLogo.classList.add('fa-solid', 'fa-pen-to-square');
             task.appendChild(editLogo);
 
             // DONE TASK
@@ -54,8 +53,7 @@ window.addEventListener('load', () => {
 
             // DELETE TASK
             const deleteTask = document.createElement('i');
-            deleteTask.classList.add('fa-solid');
-            deleteTask.classList.add('fa-trash');
+            deleteTask.classList.add('fa-solid', 'fa-trash');
             task.appendChild(deleteTask);
             deleteTask.addEventListener("click", () => {
                 deleteTask.parentNode.remove();
