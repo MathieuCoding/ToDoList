@@ -26,6 +26,11 @@ window.addEventListener('load', () => {
             editLogo.classList.add('fa-solid');
             editLogo.classList.add('fa-pen-to-square');
             task.appendChild(editLogo);
+
+            // DONE TASK
+            taskName.addEventListener('click', (e) => {
+                taskName.style.textDecoration = "line-through";
+            });
             
             // EDIT TASK
             editLogo.addEventListener("click", (e) => {
