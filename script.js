@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const tasks = document.querySelector('#tasks');
 
 
-    pushBtn.addEventListener("click", (e) => {
+    pushBtn.addEventListener("click", () => {
 
         if(newTaskInput.value.length == 0)
         {
@@ -28,12 +28,17 @@ window.addEventListener('load', () => {
             task.appendChild(editLogo);
 
             // DONE TASK
-            taskName.addEventListener('click', (e) => {
-                taskName.style.textDecoration = "line-through";
+            taskName.addEventListener('click', () => {
+                if (taskName.style.textDecoration == "none")
+                {
+                    taskName.style.textDecoration = "line-through";
+                }else {
+                    taskName.style.textDecoration = "none";
+                }
             });
             
             // EDIT TASK
-            editLogo.addEventListener("click", (e) => {
+            editLogo.addEventListener("click", () => {
                 if (editLogo.classList == "fa-solid fa-pen-to-square") 
                 {
                     editLogo.classList.remove("fa-pen-to-square");
@@ -52,7 +57,7 @@ window.addEventListener('load', () => {
             deleteTask.classList.add('fa-solid');
             deleteTask.classList.add('fa-trash');
             task.appendChild(deleteTask);
-            deleteTask.addEventListener("click", (e) => {
+            deleteTask.addEventListener("click", () => {
                 deleteTask.parentNode.remove();
 
             });
