@@ -10,15 +10,18 @@ body{
     background: linear-gradient(to bottom right, #cfffac, #428611);
 }
 
-.h1 {
+h1 {
     font-family: "Rock Salt", sans-serif;
+    text-align: center;
 }
-.h2 {
+h2 {
     font-family: "Rock Salt", sans-serif;
+    text-align: center;
 }
 
 .titles {
-    margin: 0 auto;
+    width: 50%;
+    margin: 5% auto;
 }
 
 
