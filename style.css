@@ -9,6 +9,19 @@ body{
     height: 100vh;
     background: linear-gradient(to bottom right, #cfffac, #428611);
 }
+
+.h1 {
+    font-family: "Rock Salt", sans-serif;
+}
+.h2 {
+    font-family: "Rock Salt", sans-serif;
+}
+
+.titles {
+    margin: 0 auto;
+}
+
+
 .container{
     width: 40%;
     top: 50%;
