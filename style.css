@@ -48,7 +48,7 @@ h2 {
     font-weight: 500;
     position: relative;
     border-radius: 5px;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat',sans-serif, monospace;
     font-size: 15px;
     border: 2px solid #d1d3d4;
 }
