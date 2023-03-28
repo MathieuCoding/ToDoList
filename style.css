@@ -11,7 +11,7 @@ body{
 }
 
 h1 {
-    font-family: "Rock Salt", monospace, sans-serif;
+    font-family: "Rock Salt", monospace, helvetica, sans-serif;
     text-align: center;
 }
 h2 {
